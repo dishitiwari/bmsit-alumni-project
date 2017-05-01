@@ -17,15 +17,15 @@
  $insert=$_POST['insert'];
  switch($viewby)
  {
- case 'id':$sql1="SELECT* FROM alumini WHERE id='$insert'";
+ case 'id':$sql1="SELECT* FROM alumni WHERE id='$insert'";
   break;
- case 'firstname':$sql1="SELECT* FROM alumini WHERE Fname='$insert'";
+ case 'firstname':$sql1="SELECT* FROM alumni WHERE Fname='$insert'";
   break;
- case 'mobileno':$sql1="SELECT* FROM alumini WHERE MOBILENO='$insert'";
+ case 'mobileno':$sql1="SELECT* FROM alumni WHERE MOBILENO='$insert'";
   break;
- case 'batch':$sql1="SELECT* FROM alumini WHERE BATCH='$insert'";
+ case 'batch':$sql1="SELECT* FROM alumni WHERE BATCH='$insert'";
   break;
- case 'eid':$sql1="SELECT* FROM alumini WHERE Emailid='$insert'";
+ case 'eid':$sql1="SELECT* FROM alumni WHERE Emailid='$insert'";
   break;
  }
  $result1 = $conn->query($sql1);
@@ -48,7 +48,7 @@ if ($result1->num_rows > 0)
 		echo "sem: ". $row1["SEM"]."<br>";
 		echo "year: ". $row1["YR"]."<br>";
 		echo "org: ". $row1["ORG"]."<br>";
-		echo "desgnation: ". $row1["DESGNATION"]."<br>";
+		echo "designation: ". $row1["designation"]."<br>";
 		echo "office address: ". $row1["OFFADDRESS"]."<br>";
 	    echo "salary: ". $row1["SALARY"]."<br>";
 		echo"<br/><br/><br/>";
