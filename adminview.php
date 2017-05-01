@@ -13,7 +13,7 @@
  {
  die("connection failed: ".mysql_connect_error());
  } 
-  $result = $conn->query("SELECT* FROM alumini");
+  $result = $conn->query("SELECT* FROM alumni");
   
 	 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
@@ -33,14 +33,25 @@
 		echo "sem: ". $row["SEM"]."<br>";
 		echo "year: ". $row["YR"]."<br>";
 		echo "org: ". $row["ORG"]."<br>";
-		echo "desgnation: ". $row["DESGNATION"]."<br>";
+		echo "designation: ". $row["designation"]."<br>";
 		echo "office address: ". $row["OFFADDRESS"]."<br>";
 	    echo "salary: ". $row["SALARY"]."<br>";
 		echo"<br/><br/><br/>";
-		 
+		echo '<form action="viewby.php" method="POST">
+         <input type="submit" id="viewby" value="viewby"/>
+         </form>
+          <form action="updateby.php" method="POST">
+         <input type="submit" id="updateby" value="updateby"/>
+          </form>';
 		 }	
+		 mysqli_close($conn);
 	}
-  mysqli_close($conn);
-?>
+	else
+	{
+	echo "NO RECORDS PRESENT THE ALUMNI DATABASE IS EMPTY";
+	mysqli_close($conn);
+	}
+  ?>
+
  </body>
  </html>

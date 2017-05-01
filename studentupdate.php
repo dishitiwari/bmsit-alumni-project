@@ -15,7 +15,7 @@
  } 
  //displaying details 
  $i=$_SESSION['Emailid'];
- $sql1="SELECT* FROM alumini WHERE Emailid='$i'";
+ $sql1="SELECT* FROM alumni WHERE Emailid='$i'";
  $result1 = $conn->query($sql1);
 if ($result1->num_rows > 0) 
 {
@@ -51,8 +51,8 @@ if ($result1->num_rows > 0)
 		echo '<a href="http://localhost/test/studentupdate2.php?Edit_type=year">Edit</a>'."<br>";
 		echo "org: ". $row1["ORG"]."     ";
 		echo '<a href="http://localhost/test/studentupdate2.php?Edit_type=org">Edit</a>'."<br>";
-		echo "desgnation: ". $row1["DESGNATION"]."     ";
-		echo '<a href="http://localhost/test/studentupdate2.php?Edit_type=desgnation">Edit</a>'."<br>";
+		echo "designation: ". $row1["designation"]."     ";
+		echo '<a href="http://localhost/test/studentupdate2.php?Edit_type=designation">Edit</a>'."<br>";
 		echo "office address: ". $row1["OFFADDRESS"]."     ";
 		echo '<a href="http://localhost/test/studentupdate2.php?Edit_type=officeaddress">Edit</a>'."<br>";
 		echo "salary: ". $row1["SALARY"]."     ";
