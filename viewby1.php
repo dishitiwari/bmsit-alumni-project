@@ -48,7 +48,7 @@ if ($result1->num_rows > 0)
 		echo "sem: ". $row1["SEM"]."<br>";
 		echo "year: ". $row1["YR"]."<br>";
 		echo "org: ". $row1["ORG"]."<br>";
-		echo "designation: ". $row1["designation"]."<br>";
+		echo "designation: ". $row1["DESIGNATION"]."<br>";
 		echo "office address: ". $row1["OFFADDRESS"]."<br>";
 	    echo "salary: ". $row1["SALARY"]."<br>";
 		echo"<br/><br/><br/>";

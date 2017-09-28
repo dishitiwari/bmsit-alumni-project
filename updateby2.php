@@ -19,8 +19,10 @@
  switch($editby)
  {
  case 'id':$sql1="SELECT* FROM alumni WHERE id='$insert'";
+ $x=1;
   break;
  case 'firstname':$sql1="SELECT* FROM alumni WHERE Fname='$insert'";
+  $x=2;
   break;
  case 'mobileno':$sql1="SELECT* FROM alumni WHERE MOBILENO='$insert'";
   break;
@@ -46,7 +48,7 @@ if ($result1->num_rows > 0)
 	 if(isset($_POST['fn']))
 	 {
 	 $i=$_POST['fn'];
-	 $sql2="UPDATE alumni SET Fname='$i'";
+	 $sql2="UPDATE alumni SET Fname='$i'WHERE (id='$insert') and $x=1)or( Fname='$insert')";
 	 }
     break;
   case 'lastname':                                        //to edit LASTNAME
@@ -255,7 +257,7 @@ if ($result1->num_rows > 0)
 	 }
     break;
 	case 'designation':                                        //to edit designation
-     $i =$row1["designation"];
+     $i =$row1["DESIGNATION"];
      echo '<form action=" " method="POST">
      <p>designation<input type="text" id="edit" name="edit"  placeholder=';
 	 if(isset($_POST['edit'])) $i=$_POST['edit']; echo $i;
@@ -332,7 +334,7 @@ if ($result1->num_rows > 0)
 		echo "sem: ". $row1["SEM"]."<br>";
 		echo "year: ". $row1["YR"]."<br>";
 		echo "org: ". $row1["ORG"]."<br>";
-		echo "designation: ". $row1["designation"]."<br>";
+		echo "designation: ". $row1["DESIGNATION"]."<br>";
 		echo "office address: ". $row1["OFFADDRESS"]."<br>";
 	    echo "salary: ". $row1["SALARY"]."<br>";
 		echo"<br/><br/><br/>";

@@ -1,5 +1,5 @@
 <?php
- session_start();
+	session_start();
  ?>
 <!DOCTYPE html>
 <html>
@@ -7,11 +7,11 @@
 <?php
    if(($_SESSION['type'])==='admin')
    {
-    header("Location:admin.php");
+		header("Location:admin.php");
    }
    else
    {
-    header("Location:student.php");
+		header("Location:student.php");
    }
 ?>
   </body>

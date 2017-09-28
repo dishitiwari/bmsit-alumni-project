@@ -64,7 +64,7 @@ if ($result1->num_rows > 0)
 		echo '<a href="http://localhost/test/updateby2.php?Edit_type=year">Edit</a>'."<br>";
 		echo "org: ". $row1["ORG"]."     ";
 		echo '<a href="http://localhost/test/updateby2.php?Edit_type=org">Edit</a>'."<br>";
-		echo "designation: ". $row1["designation"]."     ";
+		echo "designation: ". $row1["DESIGNATION"]."     ";
 		echo '<a href="http://localhost/test/updateby2.php?Edit_type=designation">Edit</a>'."<br>";
 		echo "office address: ". $row1["OFFADDRESS"]."     ";
 		echo '<a href="http://localhost/test/updateby2.php?Edit_type=officeaddress">Edit</a>'."<br>";

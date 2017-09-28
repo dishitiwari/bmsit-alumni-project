@@ -33,7 +33,7 @@
 		echo "sem: ". $row["SEM"]."<br>";
 		echo "year: ". $row["YR"]."<br>";
 		echo "org: ". $row["ORG"]."<br>";
-		echo "designation: ". $row["designation"]."<br>";
+		echo "designation: ". $row["DESIGNATION"]."<br>";
 		echo "office address: ". $row["OFFADDRESS"]."<br>";
 	    echo "salary: ". $row["SALARY"]."<br>";
 		echo"<br/><br/><br/>";
